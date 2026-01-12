@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--Este es un documento tipo html-->
+<!--Es la raiz del documento. Tambien indicamos que el idioma del contenido es en español -->
+<html lang="es">
+  <!--información general (metadatos) acerca del documento-->
+  <head>
+    <!-- codificacion, el tipo de caracteres que usarermos -->
+    <meta charset="UTF-8" />
+    <!--haceguramos que el ancho se ajuste a los disposivo-->
+    <meta name="viewport" content="width=device-width" />
+    <!--Autor :D -->
+    <meta name="author" content="Antoni Bogado" />
+    <!--Este es el fav icon (.icon)-->
+    <link rel="shortcut icon" type="images/ico" href="images/logo-icon.ico" />
+    <!--metadatos para la descripcion de la pagina-->
+    <meta
+      name="description"
+      content=" Descubres las etiquetas HTML más usadas, las más útiles y esas joyas ocultas que pocos conocen, explicadas de forma clara y con ejemplos prácticos"
+    />
+
+    <!--Titulo de la pagina-->
+    <title>Documentación HTML</title>
+  </head>
+  <!--Contenido visual del documento-->
+  <body>
+    <!--Titulos y enlaces internos de la pagina-->
+    <header>
+      <!--Titulo-->
+      <h1>Documentación de HTML Básico</h1>
+      <!--Parrafo-->
+      <p>Guía clara y sencilla</p>
+      <!-- seccion de navegacion -->
+      <nav>
+        <!-- titulo con menos relevacion que su predecesor h1 -->
+        <h2>Contenido</h2>
+
+        <!-- lista desordenada -->
+        <ul>
+          <!-- lista de elementos -->
+          <li>
+            <!-- enlace a otra seccion de la misma pagina -->
+            <a href="#intro">Introducción</a>
+          </li>
+          <li><a href="#estructura">Estructura HTML</a></li>
+          <li><a href="#etiquetas">Etiquetas comunes</a></li>
+          <li><a href="#ejemplos">Ejemplos</a></li>
+        </ul>
+        <!-- Cambiamos de tema o seccion -->
+        <hr />
+      </nav>
+    </header>
+
+    <!-- contenido principal del <body> -->
+    <main>
+      <!--Contendio con sentido e independiete que puede ser reutilizado-->
+      <article id="intro">
+        <h2>Introducción</h2>
+
+        <!-- parrafo -->
+        <p>
+          <!-- tiqueta para abrebiaciones -->
+          <abbr title="HyperText Markup Language">HTML</abbr>es el lenguaje
+          fundamental con el que se construye la estructura de cualquier página
+          web. No es un lenguaje de programación, sino un
+          <!-- Hacemos mucho enfasis en esa part -->
+          <strong>lenguaje de marcado</strong>
+          que utiliza etiquetas para organizar y describir el contenido: textos,
+          imágenes, enlaces, formularios y muchos otros elementos que vemos en
+          un sitio web.
+        </p>
+      </article>
+
+      <article id="estructura">
+
+        <article>
+          <h2>Estructura basica de un elemento HTML</h2>
+          <p>
+            HTML utiliza "marcas" para etiquetar texto, imágenes y otro contenido para mostrarlo en un navegador Web. Las marcas HTML incluyen "elementos" especiales como <pre><code> &lt;head&gt;, &lt;title&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, &lt;p&gt;, &lt;div&gt;, &lt;span&gt;, &lt;img&gt;, &lt;aside&gt;, &lt;audio&gt;, &lt;canvas&gt;, &lt;datalist&gt;, &lt;details&gt;, &lt;embed&gt;, &lt;nav&gt;, &lt;output&gt;, &lt;progress&gt;, &lt;video&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; </code></pre> y muchos otros.
+
+Un elemento HTML se distingue de otro texto en un documento mediante "etiquetas", que consisten en el nombre del elemento rodeado por "<" y ">". El nombre de un elemento dentro de una etiqueta no distingue entre mayúsculas y minúsculas. Es decir, se puede escribir en mayúsculas, minúsculas o una mezcla. Por ejemplo, la etiqueta &lt;title&gt; se puede escribir como &lt;Title&gt;, &lt;TITLE&gt; o de cualquier otra forma.
+          </p>
+        </article>
+
+        <article>
+          <h2>Estructura basica de un documento HTML</h2>
+
+          <!-- Mostramos el texto tal cual respentando espacios e indicamos que es codigo -->
+          <pre><code>
+          &lt;!DOCTYPE html&gt;    &lt;!-- Aqui indiicamos que el documento es tipo html, aunque la mayoria de los navegadores lo abriran asi de manera predeterminada --&gt;
+            &lt;html lang="es" &gt;       &lt;!-- Es la raiz del documento. Tambien indicamos que el idioma del contenido es en español --&gt;
+              &lt;head&gt;    &lt;!-- información general (metadatos) acerca del documento --&gt;
+
+              &lt;!-- Aqui dentro estaran los metadatos de nuestra pagina, Ejemplo: --&gt;
+    
+              &lt;meta charset="UTF-8" /&gt;    &lt;!--codificacion, el tipo de caracteres que usarermos --&gt;
+
+              &lt;/head&gt;   &lt;!-- Cierre del head --&gt;
+              
+              &lt;body&gt;      &lt;!-- Contenido visual del documento --&gt;
+
+              &lt;!-- Aqui estara el contenido de nuestra pagina --&gt;
+
+              &lt;/body&gt;   &lt;!-- Cierre del body --&gt;
+          &lt;/html&gt;   &lt;!-- Cierre del hml --&gt;
+
+        </code></pre>
+        </article>
+
+      </article>
+
+      <article id="etiquetas">
+        <h2>Etiquetas comunes</h2>
+
+        <details>
+          <summary>&lt;h1&gt; - &lt;h6&gt;</summary>
+          <p>Se usan para títulos.</p>
+        </details>
+
+        <details>
+          <summary>&lt;p&gt;</summary>
+          <p>Define un párrafo.</p>
+        </details>
+
+        <details>
+          <summary>&lt;a&gt;</summary>
+          <p>Define enlaces.</p>
+        </details>
+      </article>
+
+      <article id="ejemplos">
+        <h2>Ejemplo práctico</h2>
+
+        <blockquote>“HTML no es programación, es estructura.”</blockquote>
+
+        <pre><code>
+<h1>Hola mundo</h1>
+<p>Mi primera página</p>
+    </code></pre>
+      </article>
+
+      <footer>
+        <hr />
+        <p>📄 Documentación creada por Tu Nombre</p>
+        <p><time datetime="2026-01-10">Enero 2026</time></p>
+      </footer>
+    </main>
+  </body>
+</html>
