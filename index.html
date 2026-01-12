@@ -9,7 +9,7 @@
     <!--haceguramos que el ancho se ajuste a los disposivo-->
     <meta name="viewport" content="width=device-width" />
     <!--Autor :D -->
-    <meta name="author" content="Antoni Bogado" />
+    <meta name="author" content="Antoni R. Bogado A." />
     <!--Este es el fav icon (.icon)-->
     <link rel="shortcut icon" type="images/ico" href="images/logo-icon.ico" />
     <!--metadatos para la descripcion de la pagina-->
@@ -43,7 +43,8 @@
           </li>
           <li><a href="#estructura">Estructura HTML</a></li>
           <li><a href="#etiquetas">Etiquetas comunes</a></li>
-          <li><a href="#ejemplos">Ejemplos</a></li>
+          <li><a href="#poco-comunes">Etiquetas poco comunes</a></li>
+          <li><a href="#obsoletas">Etiquetas obsoletas</a></li>
         </ul>
         <!-- Cambiamos de tema o seccion -->
         <hr />
@@ -59,7 +60,7 @@
         <!-- parrafo -->
         <p>
           <!-- tiqueta para abrebiaciones -->
-          <abbr title="HyperText Markup Language">HTML</abbr>es el lenguaje
+          <abbr title="HyperText Markup Language">HTML</abbr> es el lenguaje
           fundamental con el que se construye la estructura de cualquier página
           web. No es un lenguaje de programación, sino un
           <!-- Hacemos mucho enfasis en esa part -->
@@ -70,29 +71,40 @@
         </p>
       </article>
 
-      <article id="estructura">
-
+      <!-- Seccion de estrutura -->
+      <section id="estructura">
         <article>
           <h2>Estructura basica de un elemento HTML</h2>
           <p>
-            HTML utiliza "marcas" para etiquetar texto, imágenes y otro contenido para mostrarlo en un navegador Web. Las marcas HTML incluyen "elementos" especiales como <pre><code> &lt;head&gt;, &lt;title&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, &lt;p&gt;, &lt;div&gt;, &lt;span&gt;, &lt;img&gt;, &lt;aside&gt;, &lt;audio&gt;, &lt;canvas&gt;, &lt;datalist&gt;, &lt;details&gt;, &lt;embed&gt;, &lt;nav&gt;, &lt;output&gt;, &lt;progress&gt;, &lt;video&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; </code></pre> y muchos otros.
-
-Un elemento HTML se distingue de otro texto en un documento mediante "etiquetas", que consisten en el nombre del elemento rodeado por "<" y ">". El nombre de un elemento dentro de una etiqueta no distingue entre mayúsculas y minúsculas. Es decir, se puede escribir en mayúsculas, minúsculas o una mezcla. Por ejemplo, la etiqueta &lt;title&gt; se puede escribir como &lt;Title&gt;, &lt;TITLE&gt; o de cualquier otra forma.
+            HTML utiliza "marcas" para etiquetar texto, imágenes y otro
+            contenido para mostrarlo en un navegador Web. Las marcas HTML
+            incluyen "elementos" especiales como
+          </p>
+          <!-- Mostramos el texto tal cual respentando espacios e indicamos que es codigo -->
+          <pre><code> &lt;head&gt;, &lt;title&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, &lt;p&gt;, &lt;div&gt;, &lt;span&gt;, &lt;img&gt;, &lt;aside&gt;, &lt;audio&gt;, &lt;canvas&gt;, &lt;datalist&gt;, &lt;details&gt;, &lt;embed&gt;, &lt;nav&gt;, &lt;output&gt;, &lt;progress&gt;, &lt;video&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; </code></pre>
+          <p>
+            y muchos otros. Un elemento HTML se distingue de otro texto en un
+            documento mediante "etiquetas", que consisten en el nombre del
+            elemento rodeado por "<" y ">". El nombre de un elemento dentro de
+            una etiqueta no distingue entre mayúsculas y minúsculas. Es decir,
+            se puede escribir en mayúsculas, minúsculas o una mezcla. Por
+            ejemplo, la etiqueta &lt;title&gt; se puede escribir como
+            &lt;Title&gt;, &lt;TITLE&gt; o de cualquier otra forma.
           </p>
         </article>
 
         <article>
           <h2>Estructura basica de un documento HTML</h2>
-
-          <!-- Mostramos el texto tal cual respentando espacios e indicamos que es codigo -->
           <pre><code>
-          &lt;!DOCTYPE html&gt;    &lt;!-- Aqui indiicamos que el documento es tipo html, aunque la mayoria de los navegadores lo abriran asi de manera predeterminada --&gt;
+          &lt;!DOCTYPE html&gt;    &lt;!-- Aqui indicamos que el documento es tipo html, aunque la mayoria de los navegadores lo abriran asi de manera predeterminada --&gt;
             &lt;html lang="es" &gt;       &lt;!-- Es la raiz del documento. Tambien indicamos que el idioma del contenido es en español --&gt;
               &lt;head&gt;    &lt;!-- información general (metadatos) acerca del documento --&gt;
 
               &lt;!-- Aqui dentro estaran los metadatos de nuestra pagina, Ejemplo: --&gt;
     
-              &lt;meta charset="UTF-8" /&gt;    &lt;!--codificacion, el tipo de caracteres que usarermos --&gt;
+              &lt;meta charset="UTF-8" /&gt;    &lt;!--codificacion, el tipo de caracteres que usaremos --&gt;
+
+               &lt;title&gt; Mi pagina Web &lt;/title&gt;    &lt;!-- Este sera el titulo de nuestra pagina --&gt;
 
               &lt;/head&gt;   &lt;!-- Cierre del head --&gt;
               
@@ -101,47 +113,330 @@ Un elemento HTML se distingue de otro texto en un documento mediante "etiquetas"
               &lt;!-- Aqui estara el contenido de nuestra pagina --&gt;
 
               &lt;/body&gt;   &lt;!-- Cierre del body --&gt;
-          &lt;/html&gt;   &lt;!-- Cierre del hml --&gt;
+          &lt;/html&gt;   &lt;!-- Cierre del html --&gt;
 
         </code></pre>
         </article>
+      </section>
 
-      </article>
+      <section id="etiquetas">
+        <!-- Etiquestas comunes -->
+        <article id="comunes">
+          <h2>Etiquetas comunes</h2>
+          <!-- usamos details como un widget de revelación -->
+          <details>
+            <!-- summary muestra el contenido de details -->
+            <summary>&lt;h1&gt; - &lt;h6&gt;</summary>
+            <p>Se usan para títulos.</p>
+          </details>
 
-      <article id="etiquetas">
-        <h2>Etiquetas comunes</h2>
+          <details>
+            <summary>&lt;p&gt;</summary>
+            <p>Define un párrafo.</p>
+          </details>
 
-        <details>
-          <summary>&lt;h1&gt; - &lt;h6&gt;</summary>
-          <p>Se usan para títulos.</p>
-        </details>
+          <details>
+            <summary>&lt;a&gt;</summary>
+            <p>Define enlaces.</p>
+          </details>
 
-        <details>
-          <summary>&lt;p&gt;</summary>
-          <p>Define un párrafo.</p>
-        </details>
+          <details>
+            <summary>&lt;span&gt;</summary>
+            <p>
+              Contenedor en línea genérico para agrupar elementos y aplicar
+              estilos.
+            </p>
+          </details>
 
-        <details>
-          <summary>&lt;a&gt;</summary>
-          <p>Define enlaces.</p>
-        </details>
-      </article>
+          <details>
+            <summary>&lt;strong&gt;</summary>
+            <p>
+              Define texto con importancia fuerte, generalmente se muestra en
+              negrita.
+            </p>
+          </details>
 
-      <article id="ejemplos">
-        <h2>Ejemplo práctico</h2>
+          <details>
+            <summary>&lt;em&gt;</summary>
+            <p>Define texto con énfasis, generalmente se muestra en cursiva.</p>
+          </details>
 
-        <blockquote>“HTML no es programación, es estructura.”</blockquote>
+          <details>
+            <summary>&lt;br&gt;</summary>
+            <p>Inserta un salto de línea.</p>
+          </details>
 
-        <pre><code>
-<h1>Hola mundo</h1>
-<p>Mi primera página</p>
-    </code></pre>
-      </article>
+          <details>
+            <summary>&lt;hr&gt;</summary>
+            <p>
+              Crea una línea horizontal para separar contenido temáticamente.
+            </p>
+          </details>
 
+          <details>
+            <summary>&lt;a&gt;</summary>
+            <p>
+              Define un hipervínculo para enlazar a otras páginas o recursos.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;img&gt;</summary>
+            <p>Inserta una imagen en la página.</p>
+          </details>
+
+          <details>
+            <summary>&lt;video&gt;</summary>
+            <p>Inserta contenido de video en la página.</p>
+          </details>
+
+          <details>
+            <summary>&lt;audio&gt;</summary>
+            <p>Inserta contenido de audio en la página.</p>
+          </details>
+
+          <details>
+            <summary>&lt;ul&gt;</summary>
+            <p>Define una lista no ordenada (con viñetas).</p>
+          </details>
+
+          <details>
+            <summary>&lt;ol&gt;</summary>
+            <p>Define una lista ordenada (con números).</p>
+          </details>
+
+          <details>
+            <summary>&lt;li&gt;</summary>
+            <p>Define un elemento dentro de una lista.</p>
+          </details>
+
+          <details>
+            <summary>&lt;div&gt;</summary>
+            <p>Contenedor de bloque genérico para agrupar elementos.</p>
+          </details>
+
+          <details>
+            <summary>&lt;section&gt;</summary>
+            <p>Define una sección temática del documento.</p>
+          </details>
+
+          <details>
+            <summary>&lt;article&gt;</summary>
+            <p>Define contenido independiente y autónomo.</p>
+          </details>
+
+          <details>
+            <summary>&lt;header&gt;</summary>
+            <p>Define el encabezado de un documento o sección.</p>
+          </details>
+
+          <details>
+            <summary>&lt;footer&gt;</summary>
+            <p>Define el pie de página de un documento o sección.</p>
+          </details>
+
+          <details>
+            <summary>&lt;nav&gt;</summary>
+            <p>Define una sección de navegación con enlaces.</p>
+          </details>
+
+          <details>
+            <summary>&lt;main&gt;</summary>
+            <p>Define el contenido principal del documento.</p>
+          </details>
+
+          <details>
+            <summary>&lt;aside&gt;</summary>
+            <p>
+              Define contenido relacionado pero separado del contenido
+              principal.
+            </p>
+          </details>
+        </article>
+
+        <!-- Etiquetas poco comunes -->
+        <article id="poco-comunes">
+          <h2>Etiquetas poco comunes</h2>
+
+          <details>
+            <summary>&lt;dialog&gt;</summary>
+            <p>Crea ventanas modales o cuadros de diálogo nativos.</p>
+          </details>
+
+          <details>
+            <summary>&lt;details&gt;</summary>
+            <p>
+              Crea un widget desplegable (acordeón) sin necesidad de JavaScript.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;summary&gt;</summary>
+            <p>Define el encabezado visible de un elemento &lt;details&gt;.</p>
+          </details>
+
+          <details>
+            <summary>&lt;meter&gt;</summary>
+            <p>
+              Representa una medición escalar dentro de un rango conocido (como
+              uso de disco, votos).
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;progress&gt;</summary>
+            <p>Representa el progreso de completitud de una tarea.</p>
+          </details>
+
+          <details>
+            <summary>&lt;mark&gt;</summary>
+            <p>
+              Resalta o marca texto relevante, como si usaras un marcador
+              amarillo.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;time&gt;</summary>
+            <p>Representa una fecha u hora específica de forma semántica.</p>
+          </details>
+
+          <details>
+            <summary>&lt;wbr&gt;</summary>
+            <p>
+              Sugiere un punto opcional de salto de línea dentro de palabras
+              largas.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;bdi&gt;</summary>
+            <p>Aísla texto bidireccional para idiomas como árabe o hebreo.</p>
+          </details>
+
+          <details>
+            <summary>&lt;ruby&gt;</summary>
+            <p>
+              Define anotaciones ruby para mostrar pronunciación en idiomas
+              asiáticos.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;rt&gt;</summary>
+            <p>Define el texto de anotación ruby (pronunciación).</p>
+          </details>
+
+          <details>
+            <summary>&lt;rp&gt;</summary>
+            <p>
+              Proporciona paréntesis alternativos para navegadores que no
+              soportan ruby.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;kbd&gt;</summary>
+            <p>
+              Representa entrada de teclado o teclas que el usuario debe
+              presionar.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;samp&gt;</summary>
+            <p>Representa la salida de muestra de un programa o sistema.</p>
+          </details>
+
+          <details>
+            <summary>&lt;var&gt;</summary>
+            <p>
+              Representa una variable en expresiones matemáticas o de
+              programación.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;dfn&gt;</summary>
+            <p>Indica que un término está siendo definido por primera vez.</p>
+          </details>
+
+          <details>
+            <summary>&lt;abbr&gt;</summary>
+            <p>
+              Define una abreviatura o acrónimo, con su significado completo en
+              el atributo title.
+            </p>
+          </details>
+
+          <h3>Multimedias extrañas:</h3>
+
+          <details>
+            <summary>&lt;track&gt;</summary>
+            <p>
+              Define pistas de texto para elementos de video (subtítulos,
+              descripciones, capítulos).
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;picture&gt;</summary>
+            <p>
+              Contenedor para múltiples fuentes de imágenes responsive y
+              adaptativas.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;embed&gt;</summary>
+            <p>Inserta contenido externo como PDFs, Flash u otros plugins.</p>
+          </details>
+
+          <details>
+            <summary>&lt;object&gt;</summary>
+            <p>
+              Inserta un objeto multimedia genérico (imágenes, videos, PDFs,
+              applets).
+            </p>
+          </details>
+        </article>
+
+        <!-- Etiquestas obsoletas -->
+        <article id="obsoletas">
+          <h3>Obsoletas, curiosas:</h3>
+
+          <details>
+            <summary>&lt;marquee&gt;</summary>
+            <p>
+              Crea texto o contenido en movimiento. OBSOLETA - No usar en
+              proyectos modernos.
+            </p>
+          </details>
+
+          <details>
+            <summary>&lt;blink&gt;</summary>
+            <p>
+              Hace que el texto parpadee. OBSOLETA - No funciona en navegadores
+              modernos.
+            </p>
+          </details>
+        </article>
+      </section>
+      
+      <!-- pie de pagina -->
       <footer>
         <hr />
-        <p>📄 Documentación creada por Tu Nombre</p>
-        <p><time datetime="2026-01-10">Enero 2026</time></p>
+        <p>
+          Documentación creada por Antoni R. Bogado A.-Dev con información de
+          <a
+            href="https://developer.mozilla.org/es/docs/Web/HTML"
+            target="_blank"
+            rel="noopener"
+            rel="noreferrer"
+            >MDN Web Docs</a
+          >
+        </p>
+        <p><time datetime="2026-01">Enero 2026</time></p>
       </footer>
     </main>
   </body>
